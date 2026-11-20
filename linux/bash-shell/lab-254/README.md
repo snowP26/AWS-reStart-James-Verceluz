@@ -8,8 +8,15 @@ Run it from this folder, because the script uses the relative path `files/`:
 
 ```bash
 cd linux/bash-shell/lab-254
-mkdir -p files
+```
+
+Ensure that the bash script has the proper execute permission to run the script. use the command:
+```bash
 chmod +x lab-254-challenge.sh
+```
+
+Run the script with:
+```bash
 ./lab-254-challenge.sh
 ```
 
