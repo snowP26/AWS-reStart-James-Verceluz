@@ -1,6 +1,6 @@
 # Lab 254 Challenge
 
-`lab-254-challenge.sh` creates the next batch of 25 empty files in `files/`, named `james<number>`. Each run picks up where the last one stopped: if `files/` already holds `james1` to `james150`, the next run creates `james151` to `james175`.
+`lab-254-challenge.sh` asks for a name, then creates the next batch of 25 empty files in `files/`, named `<name><number>`. Each run picks up where the last one stopped for that name: if `files/` already holds `james1` to `james150`, entering `james` creates `james151` to `james175`.
 
 ## Run it
 
@@ -22,9 +22,11 @@ Run the script with:
 
 ## How it works
 
-1. Counts the files in `files/` whose names match `james<number>` (`ls | grep -E | wc -l`)
-2. Loops 25 times from that count + 1, running `touch` on each new file
-3. Prints a confirmation line for every file it creates
+1. Asks for the name to use as the file prefix
+2. Creates `files/` if it does not exist
+3. Counts the files in `files/` whose names match `<name><number>` (`ls | grep -E | wc -l`)
+4. Loops 25 times from that count + 1, running `touch` on each new file
+5. Prints a green confirmation line for every file it creates
 
 ## Clearing the files
 
