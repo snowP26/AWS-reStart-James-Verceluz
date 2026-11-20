@@ -38,3 +38,5 @@ Each folder has its own short README.
 I'm James Gabriel Verceluz, an AWS re/Start Batch 33 participant learning cloud computing, Linux, and scripting one lab at a time.
 
 - GitHub: [@snowP26](https://github.com/snowP26)
+- LinkedIn: [jamesverceluz](https://www.linkedin.com/in/jamesverceluz)
+- Portfolio: [jamesverceluz.dev](https://jamesverceluz.dev)
