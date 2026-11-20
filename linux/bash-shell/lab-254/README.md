@@ -25,3 +25,25 @@ Run the script with:
 1. Counts the files in `files/` whose names match `james<number>` (`ls | grep -E | wc -l`)
 2. Loops 25 times from that count + 1, running `touch` on each new file
 3. Prints a confirmation line for every file it creates
+
+## Clearing the files
+
+`clear-files.sh` empties a directory so you can test `lab-254-challenge.sh` again from the start. It deletes everything inside the directory but keeps the directory itself.
+
+Give it execute permission and run it from this folder:
+
+```bash
+chmod +x clear-files.sh
+./clear-files.sh
+```
+
+When it asks for a directory, enter `files`.
+
+> **Warning:** the deletion is permanent and includes subfolders. Never enter `.` because that would delete the scripts in this folder too.
+
+### How it works
+
+1. Asks for the directory to clear and exits with an error if it does not exist
+2. Asks for confirmation: `y` or `Y` continues, anything else aborts
+3. Runs `rm -rf "$DIR"/*` to delete the contents (hidden files starting with `.` are not matched by `*` and stay)
+4. Prints a success message and runs `ls -l` on the directory to show it is empty
