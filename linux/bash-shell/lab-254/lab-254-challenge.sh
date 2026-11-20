@@ -8,9 +8,18 @@
 #               number that already exists in the directory.
 # Usage       : ./lab-254-challenge.sh
 
+read -p "Enter your name: " NAME
+
+if [ ! -d "files" ]; then
+	mkdir "files"
+fi
+
+GREEN="\033[32m"
+END="\033[0m"
 COUNT=$(ls files/ | grep -E '^james[0-9]+$' | wc -l)
 
 for(( i=COUNT+1; i<=COUNT+25; i++ )) do
-	touch "files/james$i"
-	echo "Successfully created file james$i"
+	touch "files/$NAME$i"
+	printf "${GREEN}Successfully${END} created file $NAME$i\n"
 done
+
