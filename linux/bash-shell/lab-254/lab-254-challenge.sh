@@ -16,7 +16,7 @@ fi
 
 GREEN="\033[32m"
 END="\033[0m"
-COUNT=$(ls files/ | grep -E '^james[0-9]+$' | wc -l)
+COUNT=$(ls files/ | grep -E "^${NAME}[0-9]+$" | wc -l)
 
 for(( i=COUNT+1; i<=COUNT+25; i++ )) do
 	touch "files/$NAME$i"
